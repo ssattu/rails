@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
    root "libraries#index"
+
+
+   get "books" => "books#index"
+   get "authors" => "authors#index"
+
+   get "genre" => "subjects#index"
+
 end

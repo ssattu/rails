@@ -1,0 +1,28 @@
+<h1 class="d-flex justify-content-center align-content-center text-primary m-5"><u>Books</u></h1>
+
+
+<div class="d-flex justify-content-center">
+<div>
+	<table>
+		<thead class="border-1 ">
+			<th class="text-center border-2 p-2">Id</th>
+			<th class="text-center border-2 p-2 ">Name</th>
+			
+		</thead>
+		<% @subjects.each do |subjects| %>
+		<tr class="border-1 ">
+			
+			<td class="border-1 p-2"><%= subjects.id %></td>
+			<td class="border-1 p-2"><%= subjects.name %></td>
+
+			
+		</tr>
+		<% end %>
+	</table>
+</div>
+</div>
+
+<%= form_with url: "/books", method: :patch do |form| %>
+  <%= form.button "Delete", formmethod: :delete, data: { confirm: "Are you sure?" } %>
+  <%= form.button "Update" %>
+<% end %>

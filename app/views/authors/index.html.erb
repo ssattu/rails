@@ -1,0 +1,24 @@
+<h1 class="d-flex justify-content-center align-content-center text-warning m-5"><u>Authors</u></h1>
+
+
+<div class="d-flex justify-content-center">
+	<div>
+	<table>
+		<thead class="border-1 ">
+			<th class="text-center  border-2 p-2">Id</th>
+			<th class="text-center border-2 p-2 ">Name</th>
+				<th class="text-center border-2 p-2 ">Age</th>
+		</thead>
+		
+		<% @authors.each do |author| %>
+		<tr class="border-1 ">
+			
+			<td class="border-1 p-3"><%= author.id %></td>
+			<td class="border-1 p-3"><%= author.name %></td>
+			<td class="border-1 p-3"><%= author.age %></td>
+			
+		</tr>
+		<% end %>
+	</table>
+</div>
+</div>
